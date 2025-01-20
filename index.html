@@ -1,77 +1,805 @@
+<!--========================================================= 
+# Portfolio Website - Dr. Shams Basir
+# Author: Shams Basir
+# Last Updated: 2024
+=========================================================-->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shams Basir - Portfolio</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
-<body>
-    <!-- Sidebar -->
-    <nav class="sidebar">
-        <div class="profile-section">
-            <img src="images/shams.png" alt="Shams Basir" class="profile-image">
-            <h1>Shams Basir</h1>
-            <div class="social-icons">
-                <a href="https://github.com/shamsbasir" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/shamsulhaqbasir/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://scholar.google.com/citations?hl=en&user=BXxIzI0AAAAJ" target="_blank">
-                    <i class="fas fa-graduation-cap"></i>
-                </a>
-            </div>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
-            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-            <li><a href="#resume"><i class="fas fa-file"></i> Resume</a></li>
-            <li><a href="#portfolio"><i class="fas fa-folder"></i> Portfolio</a></li>
-        </ul>
-        <div class="mt-auto text-center">
-            <small>© 2024 Shams Basir</small>
-        </div>
-    </nav>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <section id="about">
-            <h2 class="section-title">About</h2>
-            <div class="about-content">
-                <img src="images/shams.png" alt="About Shams" class="about-image">
-                <div>
-                    <h3 class="job-title">Senior Machine Learning Engineer</h3>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>Phone: +14026183435</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Degree: PhD</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>City: Pittsburgh, USA</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>Email: shamsb@example.com</span>
+<!--========================================================= 
+# Head Section - Meta, Links, and Styles
+=========================================================-->
+<head>
+    <!-- Meta Tags for SEO and Viewport -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Shams Basir Portfolio</title>
+    <meta content="Portfolio website of Dr. Shams Basir, featuring ML and AI projects" name="description">
+    <meta content="machine learning, AI, deep learning, portfolio" name="keywords">
+
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicon_io/site.webmanifest">
+    
+
+    <!-- Google Fonts - Open Sans, Raleway, Poppins -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">              <!-- Animate on Scroll -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">  <!-- Bootstrap 5 -->
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">    <!-- Boxicons Icons -->
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> <!-- Bootstrap Icons -->
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">  <!-- Lightbox -->
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">     <!-- Swiper Slider -->
+
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <!-- <header> -->
+  <header id="header">
+    <div class="d-flex flex-column">
+    <!-- <div> -->
+
+      <div class="profile">
+        <img src="assets/img/shams.png" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Shamsulhaq</a></h1>
+        <h1 class="text-light"><a href="index.html">Basir</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://github.com/shamsbasir" class="github"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/shamsulhaqbasir/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?hl=en&user=BXxIzI0AAAAJ" class="google-scholar"><i class="bx bxs-graduation"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bi bi-house navicon"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bi bi-person navicon"></i> <span>About</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bi bi-file-earmark-text navicon"></i> <span>Resume</span></a></li>
+          <li><a href="#certifications" class="nav-link scrollto"><i class="bi bi-award navicon"></i> <span>Achievements</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bi bi-images navicon"></i> <span>Projects</span></a></li>
+          <li><a href="#papers" class="nav-link scrollto"><i class="bi bi-journal-text navicon"></i> <span>Publications</span></a></li>   
+          <li><a href="#talks" class="nav-link scrollto"><i class="bi bi-mic navicon"></i> <span>Talks</span></a></li>    
+          <li><a href="#contact" class="nav-link scrollto"><i class="bi bi-envelope navicon"></i> <span>Contact</span></a></li>
+         </ul>
+      </nav>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div id="particles-js"></div>
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Shamsulhaq(Shams) Basir</h1>
+      <p><span class="typed" data-typed-items="I specialize in Machine Learning and Deep Learning, I have extensive experience in Data Science and Data Analytics, I am an expert in physics-informed neural networks (PINNs), I hold dual degrees in Aerospace and Civil Engineering, Outside of tech I am passionate about Mixed Martial Arts"></span></p>
+    </div>
+  </section>
+  <!-- End Hero -->>
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="assets/img/shams.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Senior Machine Learning Engineer &amp; Data Scientist.</h3>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+14026083435</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Raleigh, NC</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>PhD</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>shamsbasir@gmail.com</span></li>
+                </ul>
+              </div>
+            </div>
+            <p>
+                AWS Certified Senior Machine Learning Engineer specializing in Generative AI with 6+ years of experience in machine learning, deep learning, and AI product development. Expert in LLMs, Generative AI (GANs, VAEs, Diffusion Models), NLP , and building scalable AI-driven solutions. Proficient in Python, R, MLFlow, Docker, MLOps, LLMOps, CI/CD, Git , and data science frameworks such as Scikit-Learn, NumPy, and Pandas. Skilled in training, fine-tuning, and deploying machine learning models on AWS cloud platforms, and creating user-centric dashboards using Streamlit . Demonstrates a proven track record of developing and deploying innovative chatbots and conversational agents , including LLM-powered solutions for clinical and commercial applications. Delivers scalable, user-aware AI systems that streamline workflows, enhance customer engagement, and generate significant business value.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Skills</h2>
+        </div>
+    
+        <div class="row skills-content">
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="progress">
+              <span class="skill">Machine Learning & Deep Learning<i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+    
+            <div class="progress">
+              <span class="skill">Large Language Models (LLMs)<i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+    
+            <div class="progress">
+              <span class="skill">Physics-informed Neural Networks<i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+    
+            <div class="progress">
+              <span class="skill">Python, TensorFlow, PyTorch<i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="progress">
+              <span class="skill">AWS & Cloud Computing<i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+    
+            <div class="progress">
+              <span class="skill">MLOps & CI/CD<i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+    
+            <div class="progress">
+              <span class="skill">Data Science & Analytics<i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+    
+            <div class="progress">
+              <span class="skill">Scientific Computing<i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+<!-- Resume Section -->
+<section id="resume" class="resume">
+  <div class="container">
+    <div class="section-title">
+        <h2>Resume</h2>
+        <div class="resume-download">
+            <a href="assets/files/Shams_CV.pdf" download class="download-btn">
+                <i class="bx bx-download"></i> Download CV
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+      <!-- Left Column - Education -->
+      <div class="col-lg-6" data-aos="fade-up">
+        <h3 class="resume-title">Summary</h3>
+        <div class="resume-item pb-0">
+          <h4>Shamsulhaq Basir</h4>
+          <ul>
+            <li>Raleigh, NC</li>
+            <li>shamsbasir@gmail.com</li>
+          </ul>
+        </div>
+
+        <h3 class="resume-title">Education</h3>
+        <div class="resume-item">
+          <h4>PhD in Mechanical Engineering (Machine Learning)</h4>
+          <h5>Aug 2018 - April 2023</h5>
+          <p><em>University of Pittsburgh, Pittsburgh, PA</em></p>
+          <p>Specialization: Physics-informed Machine Learning (ML)</p>
+          <p>Coursework: GPA 4.0/4.0</p>
+          <ul>
+            <li>Parallel Computing (MPI, CUDA, OpenACC)</li>
+            <li>Numerical Methods in Scientific Computing</li>
+            <li>Linear and Complex Analysis</li>
+            <li>Optimization Methods</li>
+            <li>Reduced Order Modeling</li>
+            <li>Advanced Fluid Mechanics</li>
+          </ul>
+        </div>
+        
+        <div class="resume-item">
+          <h4>Visiting Student - Machine Learning</h4>
+          <h5>Jan 2020 - Jan 2022</h5>
+          <p><em>Carnegie Mellon University, Pittsburgh, PA</em></p>
+          <p>Coursework: GPA 4.0/4.0</p>
+          <ul>
+            <li>Machine Learning 10601</li>
+            <li>Deep Learning 11-785</li>
+            <li>Machine Learning with Large Data Sets 10-605</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>Bachelor of Science - Civil Engineering (Double Major)</h4>
+          <h5>2014 - 2017</h5>
+          <p><em>Middle East Technical University, Ankara, Turkey</em></p>
+          <p>Coursework: GPA 3.30/4.0</p>
+          <ul>
+            <li>Calculus of Functions of Several Variables</li>
+            <li>Object Oriented Programming with C/Fortran</li>
+            <li>Structural Analysis, Soil Mechanics</li>
+            <li> Introduction to Probability and Stat I, tatistical Methods For Engineers</li>
+            <li> Principles of Transportation Traffic</li>
+            </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>Bachelor of Science - Aerospace Engineering</h4>
+          <h5>2012 - 2017</h5>
+          <p><em>Middle East Technical University, Ankara, Turkey</em></p>
+          <p>Coursework: GPA 3.50/4.0</p>
+          <ul>
+            <li>Calculus and Analytic Geometry, Differential Equations</li>
+            <li> Thermodynamics, Aerodynamics, Propulsion</li>
+            <li>Heat and Mass Transfer, Flight Mechanics, Mechanical Vibration</li>
+            <li> Aerosace Engineering Design</li>
+          </ul>
+        </div>
+
+
+
+
+      </div>
+
+      <!-- Right Column - Experience -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="resume-title">Professional Experience</h3>
+        <div class="resume-item">
+          <h4>Senior Machine Learning Engineer</h4>
+          <h5>April 2024 - Present</h5>
+          <p><em>Quinstreet, Remote</em></p>
+          <ul>
+            <li>As the sole Full-Stack Machine Learning Engineer and AI Product Specialist, lead the end-to-end development lifecycle of Large Language Model (LLM)-powered AI Agents and Chatbots</li>
+            <li>Architect re-engagement solutions using voice, SMS, and email assistants to enhance customer interactions and optimize monetization</li>
+            <li>Designed, developed and deployed two LLM-powered chatbots boosting engagement by 20% and generating $100,000 USD monthly revenue</li>
+            <li>Architected GPT-4o-mini and LLM-based chatbots with advanced intent classification and automatic language detection</li>
+            <li>Integrated RAG framework with advanced query optimization, delivering high-accuracy responses</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>Senior Manager, Data Science</h4>
+          <h5>Jan 2023 - April 2024</h5>
+          <p><em>Bristol Myers Squibb, Remote</em></p>
+          <ul>
+            <li>Led NLP and Generative AI initiatives, specializing in question-answering chatbot development using PyTorch and Hugging Face</li>
+            <li>Clinical Trial Design Intelligence Chatbot (ChatCTDI): Generated $5 million in annual savings through advanced question-answering platform</li>
+            <li>Line of Therapy (LoT) Adjudication Solution: Achieved 93% accuracy in cancer therapy lines adjudication (pending patent)</li>
+            <li>Developed AI-Powered Data Review Assistant for data inconsistency detection improving efficiency by 20x</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>Data Scientist</h4>
+          <h5>June 2022 - Aug 2022</h5>
+          <p><em>Bristol Myers Squibb, Remote</em></p>
+          <ul>
+            <li>Clinical Trial Analysis: Collaborated on Upper Gastrointestinal and prostate cancer trials using ADaM and SDTM data formats</li>
+            <li>Developed data factory using AWS Redshift, Python, and Pandas for cancer data analysis</li>
+            <li>Investigated heterogeneous treatment effects using deep learning on time-to-event data</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>Graduate Student Researcher (Machine Learning)</h4>
+          <h5>Aug 2018 - June 2022</h5>
+          <p><em>University of Pittsburgh, Pittsburgh, PA</em></p>
+          <ul>
+            <li>Physics-Informed Machine Learning: Led groundbreaking research in physics-informed neural networks (PINNs) and domain decomposition methods, publishing in top-tier journals</li>
+            <li>Failure Modes in PINNs: Investigated failure modes of PINNs, uncovered scale-related challenges and proposed solutions</li>
+            <li>Physics and Equality Constrained Neural Networks (PECANNs): Engineered a framework aligning neural networks with physics laws and multi-fidelity data</li>
+            <li>Domain Decomposition with Neural Networks: Explored domain decomposition methods using AI to solve partitioned domains efficiently, developing parallel numerical methods with MPI</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- End Resume Section -->
+
+<!-- ======= Certifications Section ======= -->
+<section id="certifications" class="certifications">
+  <div class="container">
+    <div class="section-title">
+      <h2>Certifications</h2>
+    </div>
+
+    <div class="table-responsive" data-aos="fade-up">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Title</th>
+            <th>Type</th>
+            <th>Certificate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2023</td>
+            <td>AWS Certified Machine Learning</td>
+            <td>Cloud & ML</td>
+            <td><a href="#" class="btn btn-sm btn-primary"><i class="bx bx-link-external"></i> View</a></td>
+          </tr>
+          <tr>
+            <td>2023</td>
+            <td>AWS Cloud Practitioner</td>
+            <td>Cloud</td>
+            <td><a href="#" class="btn btn-sm btn-primary"><i class="bx bx-link-external"></i> View</a></td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>Fundamentals of Deep Learning for Multi GPUs</td>
+            <td>AI/ML</td>
+            <td><a href="#" class="btn btn-sm btn-primary"><i class="bx bx-link-external"></i> View</a></td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>Neural Networks and Deep Learning</td>
+            <td>AI/ML</td>
+            <td><a href="#" class="btn btn-sm btn-primary"><i class="bx bx-link-external"></i> View</a></td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>Generative AI with Large Language Models</td>
+            <td>AI/ML</td>
+            <td><a href="#" class="btn btn-sm btn-primary"><i class="bx bx-link-external"></i> View</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- End Certifications Section -->
+
+
+    <!-- ======= Portfolio Section ======= -->
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section-bg">
+  <div class="container">
+    <div class="section-title">
+      <h2>Projects</h2>
+    </div>
+
+    <div class="row" data-aos="fade-up">
+      <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="portfolio-flters">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-llm">LLM & NLP</li>
+          <li data-filter=".filter-scientific">Scientific ML</li>
+          <li data-filter=".filter-deeplearning">Deep Learning</li>
+          <li data-filter=".filter-mlops">MLOps</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+      <!-- LLM & NLP Projects -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-llm">
+        <div class="portfolio-wrap">
+          <img src="assets/img/portfolio/chatbot.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>AI Tutor RAG System</h4>
+            <p>LLM-based AI tutoring system</p>
+            <div class="portfolio-links">
+              <a href="https://github.com/shamsbasir/ai-tutor-rag-system" title="GitHub"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scientific ML Projects -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-scientific">
+        <div class="portfolio-wrap">
+          <img src="assets/img/portfolio/pinns.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Investigating and Mitigating Failure Modes in PINNs</h4>
+            <p>Addressing challenges in solving PDEs using PINNs</p>
+            <div class="portfolio-links">
+              <a href="https://github.com/shamsbasir/investigating_mitigating_failure_modes_in_pinns" title="GitHub"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-scientific">
+        <div class="portfolio-wrap">
+          <img src="assets/img/portfolio/pecanns.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>PECANNs</h4>
+            <p>Physics and Equality Constrained Artificial Neural Networks</p>
+            <div class="portfolio-links">
+              <a href="https://github.com/HiPerSimLab/PECANN" title="GitHub"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deep Learning Projects -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-deeplearning">
+        <div class="portfolio-wrap">
+          <img src="assets/img/portfolio/deep-learning.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>myTorch</h4>
+            <p>Custom light deep learning library developed from scratch</p>
+            <div class="portfolio-links">
+              <a href="https://github.com/shamsbasir/myTorch" title="GitHub"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-deeplearning">
+        <div class="portfolio-wrap">
+          <img src="assets/img/portfolio/speech.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Attention-based End-to-End Speech-to-Text Deep NN</h4>
+            <p>Implementing speech-to-text models using attention mechanisms</p>
+            <div class="portfolio-links">
+              <a href="https://github.com/shamsbasir/Attention-based-End-to-End-Speech-to-Text-Deep_NN" title="GitHub"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-deeplearning">
+        <div class="portfolio-wrap">
+          <img src="assets/img/portfolio/stock-prediction.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Stock Prediction</h4>
+            <p>Time series analysis for stock market prediction</p>
+            <div class="portfolio-links">
+              <a href="https://github.com/shamsbasir/Stock_Prediction" title="GitHub"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MLOps Projects -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-mlops">
+        <div class="portfolio-wrap">
+          <img src="assets/img/portfolio/mlops.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>MLflow and Flask Project</h4>
+            <p>Integrating MLflow for model training and Flask for deployment</p>
+            <div class="portfolio-links">
+              <a href="https://github.com/shamsbasir/MLflow-and-Flask-Project" title="GitHub"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Projects -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-scientific">
+        <div class="portfolio-wrap">
+          <img src="assets/img/portfolio/rebl-amr.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>rebl-AMR-V2</h4>
+            <p>Open-source software for binarized-octree mesh generation</p>
+            <div class="portfolio-links">
+              <a href="https://github.com/GEM3D/rebl-AMR-V2" title="GitHub"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Papers Section -->
+<section id="publications" class="publications">
+  <div class="container">
+      <div class="section-title">
+          <h2>Publications</h2>
+      </div>
+
+      <div class="row">
+          <div class="col-lg-12" data-aos="fade-up">
+              <!-- Journal Publications -->
+              <h3 class="publications-title">Journal Publications</h3>
+              
+              <div class="publication-item">
+                  <h4>Non-overlapping, Schwarz-type domain decomposition method for physics and equality constrained artificial neural networks</h4>
+                  <p><em>Computer Methods in Applied Mechanics and Engineering</em> (2024): 117706</p>
+                  <p>Authors: Hu, Qifeng, Basir, Shamsulhaq, and Senocak, Inanc</p>
+                  <p>DOI: <a href="https://doi.org/10.1016/j.cma.2024.117706" target="_blank">10.1016/j.cma.2024.117706</a></p>
+              </div>
+
+              <div class="publication-item">
+                  <h4>Investigating and Mitigating Failure Modes in Physics-Informed Neural Networks (PINNs)</h4>
+                  <p><em>Communications in Computational Physics</em> 33.5 (2023): 1240–1269</p>
+                  <p>Authors: Basir, Shamsulhaq</p>
+                  <p>DOI: <a href="https://doi.org/10.4208/cicp.OA-2022-0239" target="_blank">10.4208/cicp.OA-2022-0239</a></p>
+              </div>
+
+              <div class="publication-item">
+                  <h4>Physics and Equality Constrained Artificial Neural Networks: Application to Forward and Inverse Problems with Multi-fidelity Data Fusion</h4>
+                  <p><em>Journal of Computational Physics</em> (2022): 111301</p>
+                  <p>Authors: Basir, Shamsulhaq, and Senocak, Inanc</p>
+                  <p>DOI: <a href="https://doi.org/10.1016/j.jcp.2022.111301" target="_blank">10.1016/j.jcp.2022.111301</a></p>
+              </div>
+
+              <!-- Preprints -->
+              <h3 class="publications-title mt-5">Preprints</h3>
+              
+              <div class="publication-item">
+                  <h4>A Generalized Schwarz-type Non-overlapping Domain Decomposition Method using Physics-constrained Neural Networks</h4>
+                  <p><em>arXiv preprint</em> (2023)</p>
+                  <p>Authors: Basir, Shamsulhaq, and Senocak, Inanc</p>
+                  <p>arXiv: <a href="https://arxiv.org/abs/2307.12435" target="_blank">2307.12435</a></p>
+              </div>
+
+              <div class="publication-item">
+                  <h4>An Adaptive Augmented Lagrangian Method for Training Physics and Equality Constrained Artificial Neural Networks</h4>
+                  <p><em>arXiv preprint</em> (2023)</p>
+                  <p>Authors: Basir, Shamsulhaq, and Senocak, Inanc</p>
+                  <p>arXiv: <a href="https://arxiv.org/abs/2306.04904" target="_blank">2306.04904</a></p>
+              </div>
+
+              <!-- Conference Papers -->
+              <h3 class="publications-title mt-5">Conference Papers</h3>
+              
+              <div class="publication-item">
+                  <h4>Critical Investigation of Failure Modes in Physics-informed Neural Networks</h4>
+                  <p><em>AIAA SCITECH 2022 Forum</em></p>
+                  <p>Authors: Basir, Shamsulhaq, and Senocak, Inanc</p>
+                  <p>DOI: <a href="https://doi.org/10.2514/6.2022-2353" target="_blank">10.2514/6.2022-2353</a></p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Publication Metrics -->
+      <div class="row mt-5">
+          <div class="col-lg-12">
+              <div class="publications-stats">
+                  <div class="row text-center">
+                      <div class="col-md-3">
+                          <div class="stat-box">
+                              <h2>3</h2>
+                              <p>Journal Papers</p>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="stat-box">
+                              <h2>2</h2>
+                              <p>Preprints</p>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="stat-box">
+                              <h2>1</h2>
+                              <p>Conference Paper</p>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="stat-box">
+                            <h2>144+</h2>
+                            <p>Citation</p>
                         </div>
                     </div>
-                    <p class="about-description">
-                        AWS Certified Senior Machine Learning Engineer specializing in Generative AI with 6+ years of experience in machine learning, deep learning, and AI product development. Expert in LLMs, Generative AI (GANs, VAEs, Diffusion Models), NLP , and building scalable AI-driven solutions. Proficient in Python, R, MLFlow, Docker, MLOps, LLMOps, CI/CD, Git , and data science frameworks such as Scikit-Learn, NumPy, and Pandas. Skilled in training, fine-tuning, and deploying machine learning models on AWS cloud platforms, and creating user-centric dashboards using Streamlit . Demonstrates a proven track record of developing and deploying innovative chatbots and conversational agents , including LLM-powered solutions for clinical and commercial applications. Delivers scalable, user-aware AI systems that streamline workflows, enhance customer engagement, and generate significant business value.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</section>
+
+
+<!-- ======= Talks Section ======= -->
+<section id="talks" class="talks">
+  <div class="container">
+    <div class="section-title">
+      <h2>Talks & Presentations</h2>
+    </div>
+
+    <div class="table-responsive" data-aos="fade-up">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Title</th>
+            <th>Event</th>
+            <th>Links</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2023</td>
+            <td>Navigating the Landscape of Large Language Models (LLMs) for Clinical Research</td>
+            <td>BioTechX - US</td>
+            <td><a href="#" class="btn btn-sm btn-primary"><i class="bi bi-file-earmark-slides"></i> Slides</a></td>
+          </tr>
+          <tr>
+            <td>2023</td>
+            <td>Fixing Physics-informed Neural Networks (PINNs)</td>
+            <td>Brown University</td>
+            <td><a href="#" class="btn btn-sm btn-primary"><i class="bi bi-file-earmark-slides"></i> Slides</a></td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>Physics Mining: Teaching Machines To Obey Physics</td>
+            <td>University of Pittsburgh</td>
+            <td><a href="#" class="btn btn-sm btn-primary"><i class="bi bi-file-earmark-slides"></i> Slides</a></td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>Physics and Equality Constrained Artificial Neural Networks</td>
+            <td>Brown University</td>
+            <td><a href="#" class="btn btn-sm btn-primary"><i class="bi bi-file-earmark-slides"></i> Slides</a></td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>Physics and Equality Constrained Artificial Neural Networks</td>
+            <td>Alan Turing Institute</td>
+            <td><a href="#" class="btn btn-sm btn-primary"><i class="bi bi-file-earmark-slides"></i> Slides</a></td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>Physics-informed and Equality-constrained Artificial Neural Networks</td>
+            <td>American Physics Society (APS)</td>
+            <td><a href="#" class="btn btn-sm btn-primary"><i class="bi bi-file-earmark-slides"></i> Slides</a></td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>Efficient and Robust Training Strategies for Physics and Equality Constrained Artificial Neural Networks</td>
+            <td>American Physics Society (APS)</td>
+            <td><a href="#" class="btn btn-sm btn-primary"><i class="bi bi-file-earmark-slides"></i> Slides</a></td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>Critical Investigation of Failure Modes in Physics-informed Neural Networks</td>
+            <td>AIAA SCITECH</td>
+            <td><a href="#" class="btn btn-sm btn-primary"><i class="bi bi-file-earmark-slides"></i> Slides</a></td>
+          </tr>
+          <tr>
+            <td>2021</td>
+            <td>Parallel solution of Partial Differential Equations on Binarized Octrees</td>
+            <td>American Physics Society (APS)</td>
+            <td><a href="#" class="btn btn-sm btn-primary"><i class="bi bi-file-earmark-slides"></i> Slides</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- End Talks Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+    
+        <div class="row" data-aos="fade-in">
+          <!-- Contact Info Row -->
+          <div class="col-lg-12">
+            <div class="info">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="address">
+                    <i class="bi bi-geo-alt"></i>
+                    <h4>Location:</h4>
+                    <p>Raleigh, NC</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="email">
+                    <a href="mailto:shamsbasir@gmail.com" style="text-decoration: none; color: inherit;">
+                      <i class="bi bi-envelope"></i>
+                      <h4>Email:</h4>
+                      <p>shamsbasir@gmail.com</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="phone">
+                    <i class="bi bi-phone"></i>
+                    <h4>Call:</h4>
+                    <p>+1 402 608 3435</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Map Row -->
+        <div class="row mt-4">
+          <div class="col-lg-12">
+            <div class="map">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103741.49158287!2d-78.6894173!3d35.7795897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ac5a2f9f51e0f7%3A0x6790b6528a11f0ad!2sRaleigh%2C%20NC!5e0!3m2!1sen!2sus"
+                width="100%" 
+                height="350" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main><!-- End #main -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+        <div class="copyright">
+            © 2024 <strong><span>Shams Basir</span></strong>
+        </div>
+    </div>
+</footer>
+  <!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="assets/js/particles-config.js"></script>
+
 </body>
+
 </html>
