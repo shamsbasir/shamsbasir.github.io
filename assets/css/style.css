@@ -195,8 +195,28 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
+
 .nav-menu {
-  padding: 30px 0 0 0;
+  padding: 10px 0; /* Reduce overall padding */
+}
+
+.nav-menu a, 
+.nav-menu li {
+  padding: 8px 0; /* Reduce individual item padding */
+  margin: 0; /* Remove any margins */
+}
+
+.nav-menu > ul > li {
+  margin-bottom: 5px; /* Small gap between items */
+}
+
+/* If using nav-link class */
+.nav-link {
+  padding: 8px 0;
+  margin-bottom: 5px;
+}
+.nav-menu {
+  padding: 10px 0;
 }
 
 .nav-menu * {
