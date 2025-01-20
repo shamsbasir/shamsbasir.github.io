@@ -13,7 +13,6 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
 }
-/* filepath: /Users/shamsulhaq/Desktop/sahithyasenthil.github.io/assets/css/style.css */
 /*--------------------------------------------------------------
 # Social Links
 --------------------------------------------------------------*/
@@ -113,10 +112,11 @@ h6 {
   left: 0;
   bottom: 0;
   width: 300px;
+  height: auto;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
   transition: all 0.5s;
-  padding: 0 10px;
+  padding: 0 20px;
   background: #040b14;
   overflow-y: auto;
 }
@@ -195,13 +195,15 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
+
 .nav-menu {
-  height: auto;
+  max-height: calc(100vh - 300px); /* Adjust based on header content */
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #149ddd #ffffff;
   padding: 10px 0;
 }
+
 
 .nav-menu * {
   margin: 0;
