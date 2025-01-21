@@ -197,7 +197,7 @@ h6 {
 /* Desktop Navigation */
 
 .nav-menu {
-  max-height: calc(100vh - 300px); /* Adjust based on header content */
+  max-height: calc(100vh - 400px); /* Adjust based on header content */
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #149ddd #ffffff;
@@ -1353,4 +1353,29 @@ section {
   font-size: 16px;
   color: #050d18;
   margin: 0;
+}
+/* Add hobbies */
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.match-details {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  margin-top: 20px;
 }
