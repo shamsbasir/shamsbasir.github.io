@@ -197,7 +197,7 @@ h6 {
 /* Desktop Navigation */
 
 .nav-menu {
-  max-height: calc(100vh - 400px); /* Adjust based on header content */
+  max-height: calc(100vh - 300px); /* Adjust based on header content */
   overflow-y: scroll; /* Changed from auto to scroll */
   scrollbar-width: thin;
   scrollbar-color: #149ddd #ffffff;
@@ -1119,7 +1119,8 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  padding: 15px;
+  padding: 10px;
+  margin: 0px 0;
   color: #f4f6fd;
   font-size: 14px;
   position: fixed;
@@ -1132,7 +1133,7 @@ section {
 
 #footer .copyright {
   text-align: left;
-  padding: 20px 50px 50px 0px;
+  padding: 20px 50px 0px 0px;
 }
 
 #footer .credits {
