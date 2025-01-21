@@ -198,17 +198,10 @@ h6 {
 
 .nav-menu {
   max-height: calc(100vh - 400px); /* Adjust based on header content */
-  overflow-y: auto;
+  overflow-y: scroll; /* Changed from auto to scroll */
   scrollbar-width: thin;
   scrollbar-color: #149ddd #ffffff;
-  padding: 10px 0;
-}
-
-
-.nav-menu * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  padding: 0px 0;
 }
 
 .nav-menu > ul > li {
