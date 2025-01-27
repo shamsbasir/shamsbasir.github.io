@@ -664,6 +664,20 @@ section {
   transform: translateY(-5px);
 }
 
+.portfolio .portfolio-wrap img {
+  display: none;
+}
+
+.portfolio .portfolio-wrap .portfolio-links img {
+  display: none;
+}
+
+.portfolio .portfolio-wrap .portfolio-info {
+  position: relative;
+  opacity: 1;
+  background: transparent;
+}
+
 .portfolio .portfolio-info {
   text-align: center;
   width: 100%;
