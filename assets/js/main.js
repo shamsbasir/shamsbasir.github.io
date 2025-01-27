@@ -88,9 +88,11 @@
           new Typed('.typed', {
             strings: typed_strings,
             loop: true,
-            typeSpeed: 100,
-            backSpeed: 50,
-            backDelay: 2000
+            typeSpeed: 30,
+            backSpeed: 10,
+            backDelay: 2000,
+            startDelay: 500,
+            smartBackspace: true
           });
         }
       }
@@ -104,9 +106,7 @@
   
         const portfolioIsotope = new Isotope(portfolioContainer, {
           itemSelector: '.portfolio-item',
-          layoutMode: 'fitRows',
-          transitionDuration: '0.4s',
-          stagger: 50
+          layoutMode: 'fitRows'
         });
   
         const portfolioFilters = utils.select('#portfolio-flters li', true);
@@ -118,11 +118,7 @@
           portfolioIsotope.arrange({
             filter: this.getAttribute('data-filter')
           });
-          
-          // Refresh AOS animations
-          setTimeout(() => {
-            AOS.refresh();
-          }, 500);
+          AOS.refresh();
         }, true);
       },
   
