@@ -197,11 +197,11 @@ h6 {
 /* Desktop Navigation */
 
 .nav-menu {
-  max-height: calc(100vh - 300px); /* Adjust based on header content */
-  overflow-y: scroll; /* Changed from auto to scroll */
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: #149ddd #ffffff;
-  padding: 0px 0;
+  scrollbar-color: rgba(20, 157, 221, 0.6) #ffffff;
+  padding: 0;
 }
 
 .nav-menu > ul > li {
@@ -221,16 +221,22 @@ h6 {
 }
 
 .nav-menu::-webkit-scrollbar {
-  width: 5px;
+  width: 6px;
 }
 
 .nav-menu::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: #f1f1f1;
+  border-radius: 3px;
 }
 
 .nav-menu::-webkit-scrollbar-thumb {
-  background-color: #149ddd;
-  border-radius: 10px;
+  background-color: rgba(20, 157, 221, 0.6);
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.nav-menu::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(20, 157, 221, 0.8);
 }
 
 .nav-menu a i,
@@ -408,9 +414,40 @@ section {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 1200px) {
+  .about .img-fluid {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 992px) {
+  .about .img-fluid {
+    max-width: 90%;
+  }
+  .section-title h2 {
+    font-size: 28px;
+  }
+}
+
 @media (max-width: 768px) {
   .about .img-fluid {
     max-width: 100%;
+  }
+  .section-title h2 {
+    font-size: 24px;
+  }
+  .skills .progress {
+    height: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title h2 {
+    font-size: 22px;
+  }
+  .portfolio #portfolio-flters li {
+    font-size: 13px;
+    padding: 8px 12px;
   }
 }
 

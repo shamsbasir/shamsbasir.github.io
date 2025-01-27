@@ -1,16 +1,36 @@
-/**
-* PHP Email Form Validation - v3.6
-* URL: https://bootstrapmade.com/php-email-form/
-* Author: BootstrapMade.com
-*/
+
 (function () {
   "use strict";
 
   let forms = document.querySelectorAll('.php-email-form');
 
+  const validateForm = (form) => {
+    const inputs = form.querySelectorAll('input, textarea');
+    let isValid = true;
+
+    inputs.forEach(input => {
+      if (input.hasAttribute('required') && !input.value.trim()) {
+        isValid = false;
+        input.classList.add('is-invalid');
+        const feedback = document.createElement('div');
+        feedback.className = 'invalid-feedback';
+        feedback.textContent = 'This field is required';
+        input.parentNode.appendChild(feedback);
+      } else {
+        input.classList.remove('is-invalid');
+        const feedback = input.parentNode.querySelector('.invalid-feedback');
+        if (feedback) feedback.remove();
+      }
+    });
+
+    return isValid;
+  };
+
   forms.forEach( function(e) {
     e.addEventListener('submit', function(event) {
       event.preventDefault();
+
+      if (!validateForm(this)) return;
 
       let thisForm = this;
 

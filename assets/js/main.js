@@ -104,7 +104,9 @@
   
         const portfolioIsotope = new Isotope(portfolioContainer, {
           itemSelector: '.portfolio-item',
-          layoutMode: 'fitRows'
+          layoutMode: 'fitRows',
+          transitionDuration: '0.4s',
+          stagger: 50
         });
   
         const portfolioFilters = utils.select('#portfolio-flters li', true);
@@ -116,7 +118,11 @@
           portfolioIsotope.arrange({
             filter: this.getAttribute('data-filter')
           });
-          AOS.refresh();
+          
+          // Refresh AOS animations
+          setTimeout(() => {
+            AOS.refresh();
+          }, 500);
         }, true);
       },
   
@@ -140,7 +146,10 @@
             offset: '80%',
             handler: function() {
               utils.select('.progress .progress-bar', true).forEach((el) => {
-                el.style.width = el.getAttribute('aria-valuenow') + '%';
+                el.style.transition = 'width 1s ease-in-out';
+                setTimeout(() => {
+                  el.style.width = el.getAttribute('aria-valuenow') + '%';
+                }, 100);
               });
             }
           });
